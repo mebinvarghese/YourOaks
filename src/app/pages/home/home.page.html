@@ -46,9 +46,12 @@
                 <ion-card no-margin margin-bottom class="full-width">
                   <ion-card-header>
                     <h4 ion-text color="dark" class="cut-text">
-                      {{topic.description}}
+                      {{topic.header}}
                     </h4>
                   </ion-card-header>
+                  <ion-card-content>
+                    {{topic.description}}
+                  </ion-card-content>
                 </ion-card>
               </ion-col>
             </ion-row>
@@ -59,22 +62,3 @@
   </ion-list>
 
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar color="primary">
-    <div class="tabs">
-      <div class="tab" [ngClass]="{ 'active' : segment === 'hottest' }" (click)="onTabSelected('hottest')">
-        <ion-icon name="flame"></ion-icon>
-        <div class="label">Hottest</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment === 'favs' }" (click)="onTabSelected('favs')">
-        <ion-icon name="star"></ion-icon>
-        <div class="label">Favorites</div>
-      </div>
-      <div class="tab" [ngClass]="{ 'active' : segment === 'profile' }" (click)="onTabSelected('profile')">
-        <ion-icon name="person"></ion-icon>
-        <div class="label">Profile</div>
-      </div>
-    </div>
-  </ion-toolbar>
-</ion-footer>

@@ -8,6 +8,7 @@
                 {
                     "id": "1",
                     "name": "topic 1",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -16,6 +17,7 @@
                 {
                     "id": "2",
                     "name": "topic 2",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -24,6 +26,7 @@
                 {
                     "id": "3",
                     "name": "topic 3",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -32,6 +35,7 @@
                 {
                     "id": "4",
                     "name": "topic 4",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -47,6 +51,7 @@
                 {
                     "id": "1",
                     "name": "topic 1",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -62,6 +67,7 @@
                 {
                     "id": "1",
                     "name": "topic 1",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",
@@ -77,6 +83,7 @@
                 {
                     "id": "1",
                     "name": "topic 1",
+                    "header": "Topic header...",
                     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatem similique magnam a, fugiat placeat aut eius? Velit fugiat, hic vero ipsa aspernatur nam ea libero est nostrum excepturi ab. 1",
                     "details": "",
                     "video": "https://player.vimeo.com/video/307791576?title=0&byline=0&portrait=0",

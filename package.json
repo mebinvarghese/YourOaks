@@ -28,7 +28,7 @@
     "@ionic/angular": "4.0.0-alpha.7",
     "@ionic/schematics-angular": "latest",
     "cordova-android": "^7.1.4",
-    "cordova-fabric-plugin": "1.1.14-dev",
+    "cordova-fabric-plugin": "^1.1.14-dev",
     "cordova-ios": "4.5.4",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
@@ -80,7 +80,8 @@
       }
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
