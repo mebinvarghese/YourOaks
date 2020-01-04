@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <img src="../assets/images/logo/Oaks-white1.png" alt="" />
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class='embed-container'>
+          <iframe width="100%" height="100%" [src]="safeUrl" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row class="question-loader" *ngIf="!questionRecieved">
+    <ion-spinner name="lines"></ion-spinner>
+    <p>
+      Loading Questions....
+    </p>
+  </ion-row>
+  <ion-list *ngIf="questionRecieved">
+    <ion-list-header>Question About the Topics</ion-list-header>
+    <ion-item *ngFor="let question of questions">
+      <ion-label position="stacked">{{question.question}}</ion-label>
+      <ion-select placeholder="Select One answer" appNoArrow (ionChange)="question.approched = true"
+        [(ngModel)]="question.seletedAnswer">
+        <ion-select-option [value]="answer.id" *ngFor="let answer of question.answers">{{answer.answer}}
+        </ion-select-option>
+      </ion-select>
+      <ion-icon class="answer-indication-icon" name="checkmark" color="success"
+        *ngIf="question.approched && question.seletedAnswer == question.answer"></ion-icon>
+      <ion-icon class="answer-indication-icon" name="close" color="danger"
+        *ngIf="question.approched && question.seletedAnswer != question.answer">
+      </ion-icon>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer *ngIf="approchedQuestion && questionRecieved" routerLink="/">
+  <ion-toolbar>
+    <ion-title>Complete</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <img src="../assets/images/logo/Oaks-white1.png" alt="" />
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let chapter of chapters; let chapterIdx = index;" class="accordian-lis" lines="none"
+    details="false">
+    <ion-item tappable (click)="chapter.open = !chapter.open" [ngClass]="{'section-active': chapter.open}">
+      <ion-icon slot="start" name="arrow-forward" *ngIf="!chapter.open"></ion-icon>
+      <ion-icon slot="start" name="arrow-down" *ngIf="chapter.open"></ion-icon>
+      <ion-label>
+        {{chapter.name}}
+      </ion-label>
+    </ion-item>
+    <ion-row *ngIf="chapter.open">
+      <ion-col>
+        <ion-card no-margin margin-bottom class="full-width">
+          <ion-card-header>
+            <h4 ion-text color="dark" class="cut-text">
+              {{chapter.description}}
+            </h4>
+          </ion-card-header>
+          <ion-list *ngFor="let topic of chapter.topics; let topicIdx = index;" class="topic-list">
+            <ion-item tappable (click)="topic.open = !topic.open">
+              <ion-icon slot="start" name="add" *ngIf="!topic.open"></ion-icon>
+              <ion-icon slot="start" name="remove" *ngIf="topic.open"></ion-icon>
+              <span class="topic-index">
+                {{topicIdx + 1}}
+              </span>
+              <h2 ion-text color="dark">{{topic.name}}</h2>
+              <ion-badge color="warning" slot="end" [routerLink]="'/course-detail/' + chapter.id + '/' + topic.id">Start
+              </ion-badge>
+            </ion-item>
+            <ion-row *ngIf="topic.open">
+              <ion-col>
+                <ion-card no-margin margin-bottom class="full-width">
+                  <ion-card-header>
+                    <h4 ion-text color="dark" class="cut-text">
+                      {{topic.description}}
+                    </h4>
+                  </ion-card-header>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <div class="tabs">
+      <div class="tab" [ngClass]="{ 'active' : segment === 'hottest' }" (click)="onTabSelected('hottest')">
+        <ion-icon name="flame"></ion-icon>
+        <div class="label">Hottest</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment === 'favs' }" (click)="onTabSelected('favs')">
+        <ion-icon name="star"></ion-icon>
+        <div class="label">Favorites</div>
+      </div>
+      <div class="tab" [ngClass]="{ 'active' : segment === 'profile' }" (click)="onTabSelected('profile')">
+        <ion-icon name="person"></ion-icon>
+        <div class="label">Profile</div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

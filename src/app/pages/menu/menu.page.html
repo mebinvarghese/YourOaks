@@ -1,0 +1,31 @@
+<ion-split-pane>
+  <ion-menu>
+    <ion-header>
+      <ion-toolbar>
+        <ion-list>
+          <ion-menu-toggle>
+            <ion-item class="dark-item">
+              <img src="../assets/images/logo/Oaks-white1.png" alt="" />
+              <ion-label>
+                <h2 ion-text color="light">Your OAKS</h2>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="dark-bg">
+      <ion-list>
+        <ion-item class="dark-item">
+          <ion-icon name="home" slot="start"></ion-icon>
+          <h2 ion-text color="light">Home</h2>
+        </ion-item>
+        <ion-item class="dark-item">
+          <ion-icon name="document" slot="start"></ion-icon>
+          <h2 ion-text color="light">Info</h2>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>
